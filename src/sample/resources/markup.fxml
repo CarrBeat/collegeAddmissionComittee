@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="555.0" prefWidth="860.0" style="-fx-background-color: b2ec5d;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <children>
+      <TabPane prefHeight="555.0" prefWidth="860.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Абитуриенты">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Button fx:id="removeApplicantButton" layoutX="585.0" layoutY="476.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="151.0" text="Удалить строку">
+                           <font>
+                              <Font name="Arial" size="16.0" />
+                           </font>
+                        </Button>
+                        <Label layoutX="341.0" prefHeight="39.0" prefWidth="177.0" text="Абитуриенты">
+                           <font>
+                              <Font name="Arial" size="27.0" />
+                           </font>
+                        </Label>
+                        <TableView fx:id="applicantTable" layoutX="14.0" layoutY="39.0" prefHeight="343.0" prefWidth="832.0">
+                          <columns>
+                              <TableColumn fx:id="idApplicantColumn" minWidth="0.0" prefWidth="35.19998359680176" text="№" />
+                            <TableColumn fx:id="FIOApplicantColumn" prefWidth="267.99999237060547" text="ФИО" />
+                            <TableColumn fx:id="applicantBirthdateColumn" minWidth="0.0" prefWidth="96.800048828125" text="Дата рождения" />
+                              <TableColumn fx:id="applicantHomeAddressColumn" minWidth="0.0" prefWidth="304.0000915527344" text="Домашний адрес" />
+                              <TableColumn fx:id="applicantPhoneNumColumn" minWidth="0.0" prefWidth="127.199951171875" text="Номер телефона" />
+                          </columns>
+                        </TableView>
+                        <TextField fx:id="applicantFIOField" layoutX="51.0" layoutY="433.0" prefHeight="26.0" prefWidth="257.0" />
+                        <TextField fx:id="applicantBirthdateField" layoutX="309.0" layoutY="433.0" prefHeight="26.0" prefWidth="95.0" />
+                        <TextField fx:id="homeAddressField" layoutX="405.0" layoutY="433.0" prefHeight="26.0" prefWidth="304.0" />
+                        <TextField fx:id="phoneNumField" layoutX="711.0" layoutY="433.0" prefHeight="26.0" prefWidth="131.0" />
+                        <Label layoutX="154.0" layoutY="403.0" prefHeight="29.0" prefWidth="42.0" text="ФИО">
+                           <font>
+                              <Font name="Arial" size="16.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="317.0" layoutY="388.0" prefHeight="44.0" prefWidth="78.0" text="Дата рождения" textAlignment="CENTER" wrapText="true">
+                           <font>
+                              <Font name="Arial" size="16.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="483.0" layoutY="396.0" prefHeight="44.0" prefWidth="146.0" text="Домашний адрес" textAlignment="CENTER">
+                           <font>
+                              <Font name="Arial" size="16.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="737.0" layoutY="382.0" prefHeight="55.0" prefWidth="78.0" text="Номер телефона" textAlignment="CENTER" wrapText="true">
+                           <font>
+                              <Font name="Arial" size="16.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="addEditButtonApplicant" layoutX="98.0" layoutY="476.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="238.0" text="   Добавить/изменить строку">
+                           <font>
+                              <Font name="Arial" size="16.0" />
+                           </font>
+                        </Button>
+                        <Label fx:id="applicantOutputField" layoutX="341.0" layoutY="472.0" prefHeight="38.0" prefWidth="240.0" textAlignment="CENTER" textFill="RED">
+                           <font>
+                              <Font name="Arial" size="18.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="applicantNumField" layoutX="17.0" layoutY="433.0" prefHeight="26.0" prefWidth="33.0" />
+                        <Label layoutX="24.0" layoutY="403.0" prefHeight="30.0" prefWidth="26.0" text="№">
+                           <font>
+                              <Font name="Arial" size="16.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Личные данные абитуриента">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="applicantDataTable" layoutX="14.0" layoutY="43.0" prefHeight="343.0" prefWidth="832.0">
+                           <columns>
+                              <TableColumn fx:id="idApplicantDataColumn" minWidth="0.0" prefWidth="35.19998359680176" text="№" />
+                              <TableColumn fx:id="applicantDataFIO" prefWidth="213.066650390625" text="ФИО" />
+                              <TableColumn fx:id="applicantDataBirthdate" minWidth="0.0" prefWidth="97.33334350585938" text="Дата рождения" />
+                              <TableColumn fx:id="applicantDataBirthplace" minWidth="0.0" prefWidth="114.13330078125" text="Место рождения" />
+                              <TableColumn fx:id="applicantDataPassportData" minWidth="0.0" prefWidth="151.7332763671875" text="Паспортные данные" />
+                              <TableColumn fx:id="applicantDataBirthCertData" minWidth="0.0" prefWidth="216.79998779296875" text="Данные свидетельства о рождении" />
+                           </columns>
+                        </TableView>
+                        <Label layoutX="265.0" layoutY="3.0" prefHeight="39.0" prefWidth="373.0" text="Личные данные абитуриента">
+                           <font>
+                              <Font name="Arial" size="27.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="applicantDataFIOField" layoutX="46.0" layoutY="436.0" prefHeight="26.0" prefWidth="218.0" />
+                        <TextField fx:id="applicantDataBithdateField" layoutX="265.0" layoutY="436.0" prefHeight="26.0" prefWidth="88.0" />
+                        <TextField fx:id="applicantDataPassportDataField" layoutX="455.0" layoutY="436.0" prefHeight="26.0" prefWidth="219.0" />
+                        <TextField fx:id="applicantDataBithCertDataField" layoutX="675.0" layoutY="436.0" prefHeight="26.0" prefWidth="171.0" />
+                        <Label layoutX="135.0" layoutY="405.0" prefHeight="29.0" prefWidth="42.0" text="ФИО">
+                           <font>
+                              <Font name="Arial" size="16.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="270.0" layoutY="391.0" prefHeight="44.0" prefWidth="78.0" text="Дата рождения" textAlignment="CENTER" wrapText="true">
+                           <font>
+                              <Font name="Arial" size="16.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="481.0" layoutY="399.0" prefHeight="44.0" prefWidth="166.0" text="Паспортные данные" textAlignment="CENTER">
+                           <font>
+                              <Font name="Arial" size="16.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="673.0" layoutY="385.0" prefHeight="55.0" prefWidth="174.0" text="Данные свидетельства о рождении" textAlignment="CENTER" wrapText="true">
+                           <font>
+                              <Font name="Arial" size="16.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="editButtonApplicantData" layoutX="98.0" layoutY="476.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="238.0" text="Изменить строку">
+                           <font>
+                              <Font name="Arial" size="16.0" />
+                           </font>
+                        </Button>
+                        <Label fx:id="applicantDataOutputField" layoutX="350.0" layoutY="469.0" prefHeight="38.0" prefWidth="350.0" textFill="RED">
+                           <font>
+                              <Font name="Arial" size="18.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="applicantDataNumField" layoutX="16.0" layoutY="436.0" prefHeight="26.0" prefWidth="30.0" />
+                        <Label layoutX="23.0" layoutY="406.0" prefHeight="30.0" prefWidth="30.0" text="№">
+                           <font>
+                              <Font name="Arial" size="16.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="applicantDataBithplaceField" layoutX="354.0" layoutY="436.0" prefHeight="26.0" prefWidth="99.0" />
+                        <Label layoutX="366.0" layoutY="391.0" prefHeight="44.0" prefWidth="78.0" text="Место рождения" textAlignment="CENTER" wrapText="true">
+                           <font>
+                              <Font name="Arial" size="16.0" />
+                           </font>
+                        </Label>
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+            <Tab text="Сведения об образовании">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="educationalDataTable" layoutX="14.0" layoutY="43.0" prefHeight="343.0" prefWidth="832.0">
+                           <columns>
+                              <TableColumn fx:id="idEducationalDataColumn" minWidth="0.0" prefWidth="35.19998359680176" text="№" />
+                              <TableColumn fx:id="educationalLevelColumn" prefWidth="134.40008163452148" text="Уровень образования" />
+                              <TableColumn fx:id="educationalCertificateNumberColumn" minWidth="0.0" prefWidth="205.6000518798828" text="Номер аттестата об образовании" />
+                              <TableColumn fx:id="educationalCertificateAverageNumColumn" minWidth="0.0" prefWidth="121.5999755859375" text="Ср-й балл аттестата" />
+                              <TableColumn fx:id="selectedSpecialityColumn" minWidth="0.0" prefWidth="119.199951171875" text="Выбранная спец-ть" />
+                              <TableColumn fx:id="specialityCodeColumn" minWidth="0.0" prefWidth="76.00006103515625" text="Код спец-ти" />
+                              <TableColumn fx:id="specialityNameColumn" minWidth="0.0" prefWidth="136.79998779296875" text="Название спец-ти" />
+                           </columns>
+                        </TableView>
+                        <Label layoutX="266.0" prefHeight="39.0" prefWidth="373.0" text="Сведения об образовании">
+                           <font>
+                              <Font name="Arial" size="27.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="educationalLevelField" layoutX="46.0" layoutY="436.0" prefHeight="26.0" prefWidth="189.0" />
+                        <TextField fx:id="educationalCertificateNumberField" layoutX="236.0" layoutY="436.0" prefHeight="26.0" prefWidth="90.0" />
+                        <TextField fx:id="selectedSpecialityField" layoutX="427.0" layoutY="436.0" prefHeight="26.0" prefWidth="161.0" />
+                        <TextField fx:id="specialityCodeField" layoutX="591.0" layoutY="436.0" prefHeight="26.0" prefWidth="98.0" />
+                        <Label layoutX="58.0" layoutY="406.0" prefHeight="30.0" prefWidth="166.0" text="Уровень образования">
+                           <font>
+                              <Font name="Arial" size="16.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="243.0" layoutY="391.0" prefHeight="44.0" prefWidth="78.0" text="Номер аттестата" textAlignment="CENTER" wrapText="true">
+                           <font>
+                              <Font name="Arial" size="16.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="437.0" layoutY="399.0" prefHeight="44.0" prefWidth="149.0" text="Выбранная спец-ть" textAlignment="CENTER">
+                           <font>
+                              <Font name="Arial" size="16.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="595.0" layoutY="393.0" prefHeight="55.0" prefWidth="90.0" text="Код спец-ти" textAlignment="CENTER" wrapText="true">
+                           <font>
+                              <Font name="Arial" size="16.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="editButtonEducationalData" layoutX="98.0" layoutY="476.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="238.0" text="Изменить строку">
+                           <font>
+                              <Font name="Arial" size="16.0" />
+                           </font>
+                        </Button>
+                        <Label fx:id="educationalDataOutputField" layoutX="347.0" layoutY="475.0" prefHeight="38.0" prefWidth="350.0" textFill="RED">
+                           <font>
+                              <Font name="Arial" size="18.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="idEducationalDataField" layoutX="14.0" layoutY="436.0" prefHeight="26.0" prefWidth="32.0" />
+                        <Label layoutX="23.0" layoutY="406.0" prefHeight="30.0" prefWidth="34.0" text="№">
+                           <font>
+                              <Font name="Arial" size="16.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="educationalCertificateAverageNumField" layoutX="329.0" layoutY="436.0" prefHeight="26.0" prefWidth="96.0" />
+                        <Label layoutX="339.0" layoutY="391.0" prefHeight="44.0" prefWidth="78.0" text="Ср-й балл аттестата" textAlignment="CENTER" wrapText="true">
+                           <font>
+                              <Font name="Arial" size="16.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="specialityNameField" layoutX="693.0" layoutY="436.0" prefHeight="26.0" prefWidth="153.0" />
+                        <Label layoutX="698.0" layoutY="393.0" prefHeight="55.0" prefWidth="144.0" text="Название спец-ти" textAlignment="CENTER" wrapText="true">
+                           <font>
+                              <Font name="Arial" size="16.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="Сведения о родителях ">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="familyDataTable" layoutX="14.0" layoutY="43.0" prefHeight="270.0" prefWidth="832.0">
+                           <columns>
+                              <TableColumn fx:id="idParentsDataColumn" minWidth="0.0" prefWidth="35.19998359680176" text="№" />
+                              <TableColumn fx:id="familyStatusColumn" prefWidth="81.59997177124023" text="Статус семьи" />
+                              <TableColumn fx:id="childQuantColumn" minWidth="0.0" prefWidth="160.0000457763672" text="Количество детей в семье" />
+                              <TableColumn fx:id="FIOmumColumn" minWidth="0.0" prefWidth="72.0" text="ФИО мамы" />
+                              <TableColumn fx:id="homeAddressMumColumn" minWidth="0.0" prefWidth="51.199951171875" text="Домашний адрес мамы" />
+                              <TableColumn fx:id="phoneNumMumColumn" minWidth="0.0" prefWidth="104.0" text="Телефон мамы" />
+                              <TableColumn fx:id="workPlaceMumColumn" minWidth="0.0" prefWidth="128.0" text="Место работы мамы" />
+                              <TableColumn fx:id="FIOdadColumn" minWidth="0.0" prefWidth="72.7999267578125" text="ФИО папы" />
+                              <TableColumn fx:id="houseAddressDadColumn" minWidth="0.0" prefWidth="50.39990234375" text="Домашний адрес папы" />
+                              <TableColumn fx:id="phoneNumDadColumn" minWidth="0.0" prefWidth="24.0" text="Телефон папы" />
+                              <TableColumn fx:id="dadWorkPlaceColumn" minWidth="0.0" prefWidth="51.20001220703125" text="Место работы папы" />
+                           </columns>
+                        </TableView>
+                        <Label layoutX="280.0" prefHeight="39.0" prefWidth="289.0" text="Сведения о родителях">
+                           <font>
+                              <Font name="Arial" size="27.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="familyStatusField" layoutX="48.0" layoutY="366.0" prefHeight="26.0" prefWidth="122.0" />
+                        <TextField fx:id="childQuantField" layoutX="172.0" layoutY="366.0" prefHeight="26.0" prefWidth="106.0" />
+                        <TextField fx:id="homeAddressMumField" layoutX="487.0" layoutY="366.0" prefHeight="26.0" prefWidth="204.0" />
+                        <TextField fx:id="workPlaceMumField" layoutX="14.0" layoutY="435.0" prefHeight="26.0" prefWidth="162.0" />
+                        <Label layoutX="52.0" layoutY="336.0" prefHeight="30.0" prefWidth="101.0" text="Статус семьи">
+                           <font>
+                              <Font name="Arial" size="16.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="175.0" layoutY="321.0" prefHeight="44.0" prefWidth="104.0" text="Кол-во детей в семье" textAlignment="CENTER" wrapText="true">
+                           <font>
+                              <Font name="Arial" size="16.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="492.0" layoutY="329.0" prefHeight="44.0" prefWidth="182.0" text="Домашний адрес мамы" textAlignment="CENTER" wrapText="true">
+                           <font>
+                              <Font name="Arial" size="16.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="18.0" layoutY="393.0" prefHeight="55.0" prefWidth="157.0" text="Место работы мамы" textAlignment="CENTER" wrapText="true">
+                           <font>
+                              <Font name="Arial" size="16.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="editButtonParentsData" layoutX="98.0" layoutY="476.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="238.0" text="Изменить строку">
+                           <font>
+                              <Font name="Arial" size="16.0" />
+                           </font>
+                        </Button>
+                        <Label fx:id="parentsDataOutputField" layoutX="347.0" layoutY="475.0" prefHeight="38.0" prefWidth="350.0" textFill="RED">
+                           <font>
+                              <Font name="Arial" size="18.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="idParentsDataField" layoutX="14.0" layoutY="366.0" prefHeight="26.0" prefWidth="33.0" />
+                        <Label layoutX="17.0" layoutY="336.0" prefHeight="30.0" prefWidth="30.0" text="№">
+                           <font>
+                              <Font name="Arial" size="16.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="FIOmumField" layoutX="280.0" layoutY="366.0" prefHeight="26.0" prefWidth="206.0" />
+                        <Label layoutX="335.0" layoutY="329.0" prefHeight="44.0" prefWidth="92.0" text="ФИО мамы" textAlignment="CENTER" wrapText="true">
+                           <font>
+                              <Font name="Arial" size="16.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="phoneNumDadField" layoutX="565.0" layoutY="436.0" prefHeight="26.0" prefWidth="115.0" />
+                        <Label layoutX="579.0" layoutY="388.0" prefHeight="54.0" prefWidth="86.0" text="Телефон папы" textAlignment="CENTER" wrapText="true">
+                           <font>
+                              <Font name="Arial" size="16.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="phoneNumMumField" layoutX="693.0" layoutY="366.0" prefHeight="26.0" prefWidth="151.0" />
+                        <Label layoutX="709.0" layoutY="329.0" prefHeight="44.0" prefWidth="118.0" text="Телефон мамы" textAlignment="CENTER" wrapText="true">
+                           <font>
+                              <Font name="Arial" size="16.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="FIOdadField" layoutX="177.0" layoutY="436.0" prefHeight="26.0" prefWidth="204.0" />
+                        <Label layoutX="240.0" layoutY="399.0" prefHeight="44.0" prefWidth="86.0" text="ФИО папы" textAlignment="CENTER" wrapText="true">
+                           <font>
+                              <Font name="Arial" size="16.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="houseAddressDadField" layoutX="382.0" layoutY="436.0" prefHeight="26.0" prefWidth="181.0" />
+                        <Label layoutX="390.0" layoutY="399.0" prefHeight="44.0" prefWidth="182.0" text="Домашний адрес папы" textAlignment="CENTER" wrapText="true">
+                           <font>
+                              <Font name="Arial" size="16.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="dadWorkPlaceField" layoutX="681.0" layoutY="436.0" prefHeight="26.0" prefWidth="165.0" />
+                        <Label layoutX="688.0" layoutY="395.0" prefHeight="51.0" prefWidth="165.0" text="Место работы папы" textAlignment="CENTER" wrapText="true">
+                           <font>
+                              <Font name="Arial" size="16.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>
